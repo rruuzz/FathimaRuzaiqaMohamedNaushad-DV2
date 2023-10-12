@@ -1,7 +1,22 @@
 <!DOCTYPE html>
-<html
+<html>
 <head>
-    <title>Doc Title</title>
+  <title>Gloabal Waste Production</title>
+  <link rel="stylesheet" type="text/css" href="MainHeadingStyle.css">
 </head>
-
+<body style="background-color: #DCF2FD;">
+  <div>
+    <link rel="stylesheet" type="text/css" href="MainHeadingStyle.css">
+    <h1>Global Waste Production Analysis</h1>
+    <script>
+        // Load the JSON data
+        fetch('C:\Users\HP\Documents\GitHub\FathimaRuzaiqaMohamedNaushad-DV2\BubblePlot.json')
+          .then(response => response.json())
+          .then(data => handleJSON(data))
+          .catch(error => {
+            console.error('Error loading JSON data:', error);
+          });
+      </script>
+  </div>
+</body>
 </html>

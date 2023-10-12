@@ -1,0 +1,20 @@
+.text-red {
+    color: black;
+  }
+  
+  /* Set text alignment to center */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Set font size and weight */
+  .custom-text {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  /* Set font family */
+  .custom-font {
+    font-family: Arial, sans-serif;
+  }
+  
