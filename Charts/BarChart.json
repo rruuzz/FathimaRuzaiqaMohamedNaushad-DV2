@@ -1,0 +1,27 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "Total MSW per year"},
+  "data": {
+    "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
+  },
+  "mark": {"type": "bar"},
+  "encoding": {
+    "x": {"title": "Region Code", "field": "region_id", "type": "ordinal"},
+    "y": {
+      "aggregate": "sum",
+      "field": "total_msw_total_msw_generated_tons_year",
+      "title": "Total MSW Generated per Year"
+    },
+    "color": {"field": "region_id", "scale": {"scheme": "category20"}},
+    "tooltip": [
+      {"field": "region_id", "type": "ordinal"},
+      {
+        "field": "total_msw_total_msw_generated_tons_year",
+        "type": "quantitative",
+        "aggregate": "sum",
+        "title": "Total MSW Generated per Year"
+      }
+    ]
+  },
+  "config": {}
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
+  },
+  "mark": "circle",
+  "encoding": {
+    "x": {
+      "field": "total_msw_total_msw_generated_tons_year",
+      "type": "quantitative",
+      "title": "Total MSW (in tons) per Year",
+      "scale": {"type": "linear", "domain": [0, 80000000]}
+    },
+    "y": {
+      "field": "waste_collection_coverage_total_percent_of_waste",
+      "type": "quantitative",
+      "title": "Total Waste Collection",
+      "scale": {"type": "linear", "domain": [30, 100]}
+    },
+    "tooltip": [
+      {
+        "field": "waste_collection_coverage_total_percent_of_waste",
+        "type": "quantitative",
+        "title": "Total Waste Collection"
+      },
+      {
+        "field": "total_msw_total_msw_generated_tons_year",
+        "type": "quantitative",
+        "aggregate": "sum",
+        "title": "Total MSW Generated per Year"
+      }
+    ],
+    "color": {
+      "field": "waste_collection_coverage_total_percent_of_waste",
+      "type": "quantitative"
+    }
+  },
+  "config": {}
+}
