@@ -1,0 +1,42 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Population vs Total MSW",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
+  },
+  "mark": "point",
+  "transform": [
+    {
+      "calculate": "datum.population_population_number_of_people / 1000000",
+      "as": "Population (in millions)"
+    },
+    {
+      "calculate": "datum.total_msw_total_msw_generated_tons_year / 1000000",
+      "as": "Total MSW Generated (in millions)"
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "Population (in millions)",
+      "title": "Population (in millions)",
+      "type": "quantitative",
+      "scale": {"zero": false}
+    },
+    "y": {
+      "field": "Total MSW Generated (in millions)",
+      "type": "quantitative",
+      "title": "Total MSW Generated (in millions)",
+      "scale": {"zero": false}
+    },
+    "color": {"field": "region_id", "type": "nominal"},
+    "tooltip": [
+      {"field": "Total MSW Generated (in millions)"},
+      {
+        "field": "Population (in millions)",
+        "title": "Population (in millions)",
+        "type": "quantitative"
+      }
+    ]
+  },
+  "config": {}
+}

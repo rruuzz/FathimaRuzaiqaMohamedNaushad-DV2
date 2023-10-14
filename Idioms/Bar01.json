@@ -12,7 +12,7 @@
       "field": "total_msw_total_msw_generated_tons_year",
       "title": "Total MSW Generated per Year"
     },
-    "color": {"field": "region_id", "scale": {"scheme": "category20"}},
+    "color": {"field": "region_id", "scale": {"scheme": "tableau10"}},
     "tooltip": [
       {"field": "region_id", "type": "ordinal"},
       {

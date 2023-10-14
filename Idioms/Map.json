@@ -25,12 +25,19 @@
     "color": {
       "field": "gdp",
       "type": "quantitative",
-      "scale": {"type": "linear", "domain": [10000, 100000]}
+      "scale": {
+        "type": "linear",
+        "domain": [10000, 100000],
+        "scheme": "tealblues"
+      },
+      "condition": {
+        "test": "datum['gdp'] === null || datum['country_name'] === null",
+        "value": "#D9DDDC"
+      }
     },
     "tooltip": [
-      {"field": "country_name", "type": "nominal"},
-      {"field": "gdp", "type": "quantitative"}
+      {"field": "gdp", "title": "GDP", "type": "quantitative", "format": ".2f"}
     ]
   },
-  "config": {}
+  "config": {"mark": {"invalid": null}}
 }

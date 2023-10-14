@@ -1,27 +1,28 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "title": "Waste Collection vs Total MSW",
   "data": {
     "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
   },
   "mark": "circle",
   "encoding": {
-    "x": {
+    "y": {
       "field": "total_msw_total_msw_generated_tons_year",
       "type": "quantitative",
       "title": "Total MSW (in tons) per Year",
       "scale": {"type": "linear", "domain": [0, 80000000]}
     },
-    "y": {
+    "x": {
       "field": "waste_collection_coverage_total_percent_of_waste",
       "type": "quantitative",
       "title": "Total Waste Collection",
-      "scale": {"type": "linear", "domain": [30, 100]}
+      "scale": {"type": "linear", "domain": [0, 105]}
     },
     "tooltip": [
       {
         "field": "waste_collection_coverage_total_percent_of_waste",
         "type": "quantitative",
-        "title": "Total Waste Collection"
+        "title": "Total Waste Collection (percentage)"
       },
       {
         "field": "total_msw_total_msw_generated_tons_year",
@@ -32,7 +33,8 @@
     ],
     "color": {
       "field": "waste_collection_coverage_total_percent_of_waste",
-      "type": "quantitative"
+      "type": "quantitative",
+      "title": "Total Waste Collection"
     }
   },
   "config": {}
