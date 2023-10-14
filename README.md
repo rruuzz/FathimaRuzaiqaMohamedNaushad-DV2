@@ -1,5 +1,3 @@
-
-<!DOCTYPE html>
 <html>
 <head>
 <title>Global Wastage Analysis</title>
