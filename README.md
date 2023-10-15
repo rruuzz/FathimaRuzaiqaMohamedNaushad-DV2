@@ -60,15 +60,9 @@
     </div>
     
   <div class="w3-half">
-    <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
-        <b>~ </b>
-    </div>
     <div id="Bar" class="vis-container"></div>
   </div>
   <div>
-    <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
-        <b>~ </b>
-    </div>
     <div class="w3-center w3-margin-bottom">
         <b> The above bar chart represents Total MSW generated yearly in each region</b>
     </div>
@@ -78,7 +72,7 @@
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
-    <div id="Scatter01" class="vis-container"></div>
+    <div id="Scatter01" class="w3-container"></div>
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
