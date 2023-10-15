@@ -132,28 +132,20 @@ function w3_close() {
 
 <script type="text/javascript">
 
-  var vis1 = "Idioms/Bar01.json";
-  vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
 
-  var vis2 = "Idioms/Bubble.json";
-  vegaEmbed('#bubble_chart', vis2).then(function(result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+  var specVis1 = "./js/Bar01.vg.json";
+    var specVis2 = "./js/Bubble.vg.json";
+    var specVis3 = "./js/Map.vg.json";
+    var specVis4 = "./js/Scatter01.vg.json";
+    var specVis5 = "./js/Scatter02.vg.json"
 
-  var vis3 = "Idioms/Map.json";
-  vegaEmbed('#chloropeth_map', vis3).then(function(result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  var vis4 = "Idioms/Scatter01.json";
-  vegaEmbed('#scatter_plot', vis4).then(function(result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
-  var vis5 = "Idioms/Scatter02.json";
-  vegaEmbed('#scatter_plot', vis5).then(function(result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
+  vegaEmbed('#vis1', specVis1, { "actions": false });
+  vegaEmbed('#vis2', specVis2, { "actions": false }).then(function (result) {
+    }).catch(console.error);
+  vegaEmbed('#vis3', specVis3, { "actions": false });
+  vegaEmbed('#vis4', specVis4, { "actions": false });
+  vegaEmbed('#vis5', specVis5, { "actions": false });
+    
 </script>
 
 
