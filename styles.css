@@ -11,20 +11,20 @@ h1 {
 }
 
 body {
-  background-color: #ebf3f8;
+  background-color: white;
 }
 
 .page {
   width: 1500px;
-  background-color:  #ebf3f8;
+  background-color:  white;
   margin: auto;
   padding: 20px;
   padding-top: 35px;
 }
 
 .vis-container {
+  align-self: center;
   width: 100%;
-  padding: 50px;
   padding-left: 20px;
   padding-right: 20px;
 }

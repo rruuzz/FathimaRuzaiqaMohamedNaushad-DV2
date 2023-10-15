@@ -1,16 +1,22 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-  "title": "Waste Collection vs Total MSW",
   "data": {
     "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
   },
+  "width": 550,
+  "height": 450,
   "mark": "circle",
+  "transform": [
+    {
+      "calculate": "datum.total_msw_total_msw_generated_tons_year / 1000000",
+      "as": "Total MSW Generated (in millions)"
+    }
+  ],
   "encoding": {
     "y": {
-      "field": "total_msw_total_msw_generated_tons_year",
+      "field": "Total MSW Generated (in millions)",
       "type": "quantitative",
-      "title": "Total MSW (in tons) per Year",
-      "scale": {"type": "linear", "domain": [0, 80000000]}
+      "title": "Total MSW (in million tons) per Year"
     },
     "x": {
       "field": "waste_collection_coverage_total_percent_of_waste",
@@ -25,7 +31,7 @@
         "title": "Total Waste Collection (percentage)"
       },
       {
-        "field": "total_msw_total_msw_generated_tons_year",
+        "field": "Total MSW Generated (in millions)",
         "type": "quantitative",
         "aggregate": "sum",
         "title": "Total MSW Generated per Year"
@@ -35,7 +41,10 @@
       "field": "waste_collection_coverage_total_percent_of_waste",
       "type": "quantitative",
       "title": "Total Waste Collection"
+    },
+    "size": {
+      "field": "waste_collection_coverage_total_percent_of_waste",
+      "type": "quantitative"
     }
-  },
-  "config": {}
+  }
 }

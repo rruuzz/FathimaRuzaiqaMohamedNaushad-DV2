@@ -33,71 +33,49 @@
 
 <!-- Header -->
 <div class="my-element">
-<header class="w3-right w3-margin-bottom">
-  <img background="header.jpg"></img>
+<header class="w3-center w3-margin-bottom">
   <h1>
-    <b>Global Wastage Analysis</b></h1>
-  <p><b>A data visualization representing analysis of gloabal wastage</b></p>
-  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+    Global Wastage Analysis
+  </h1>
+  <p><h4>A data visualization representing analysis of global wastage</h4></p>
 </header>
 </div>
 
-<!-- Photo Grid -->
-<div class="w3-row" id="myGrid" style="margin-bottom:128px">
-    <div class="w3-center w3-margin-bottom">
-        <h4>   Data on solid waste management from throughout the world is compiled. This database contains the statistics gathered during the endeavor, which span virtually all countries and over 330 cities. The metrics contain information on all aspects of the waste management value chain, such as trash generation, composition, collection, and disposal, as well as user.     </h4>
-    </div>
-    <div id="map" class= "vis-container">
-    <div class = "w3-container w3-padding-20 w3-light-grey w3-center w3-opacity w3-xlarge">
-        <b>~ </b>
-    </div>
-    <div>
-    <div class="w3-center w3-margin-bottom">
-        <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
-            <b>~ </b>
-        </div>
-        <b>The above graph represents the the GDP of each country in the for of a Chloropeth Map. </b>
-    </div>
-    
+
+<div class="w3-center w3-margin-bottom">
+    <h6>   Data on solid waste management from throughout the world is compiled. This database contains the statistics gathered during the endeavor, which span virtually all countries and over 330 cities. The metrics contain information on all aspects of the waste management value chain, such as trash generation, composition, collection, and disposal, as well as user.     </h6>
+</div>
+<div id="map" class= "vis-container w3-padding-30 w3-center w3-xlarge"></div>
+<div class="w3-center w3-margin-bottom">      
+  <b>The above graph represents the the GDP of each country in the for of a Chloropeth Map. </b>
+</div>
+  
+<div>
   <div class="w3-half">
-    <div id="Bar" class="vis-container"></div>
+      <div id="Bar" class="vis-container w3-padding-64 w3-center w3-xlarge"></div>
   </div>
   <div>
     <div class="w3-center w3-margin-bottom">
-        <b> The above bar chart represents Total MSW generated yearly in each region</b>
-    </div>
+      <b> The above bar chart represents Total MSW generated yearly in each region</b>
   </div>
+  </div>
+</div>
 
-  <div class="w3-half">
-    <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
-        <b>~ </b>
-    </div>
-    <div id="Scatter01" class="w3-container"></div>
-    <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
-        <b>~ </b>
-    </div>
+<div class="w3-half">
+    <div id="Scatter01" class="vis-container w3-padding-64 w3-center w3-xlarge"></div>
     <div class="w3-center w3-margin-bottom">
         <b> The above Scatter graph representsthe correlation between the Total MSW generated yearly agaisnt the Total Waste collection.</b>
     </div>
 </div>
 
 <div class="w3-half">
-    <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
-        <b>~ </b>
-    </div>
-    <div id="Scatter02" class="vis-container"></div>
-    <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
-        <b>~ </b>
-    </div>
+    <div id="Scatter02" class="vis-container w3-padding-64 w3-center w3-xlarge"></div>
     <div class="w3-center w3-margin-bottom">
         <b> The above Scatter graph representsthe correlation between the Total MSW generated yearly agaisnt the Total Waste collection.</b>
     </div>
 </div>
 
 <div>
-  <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
-        <b>~ </b>
-    </div>
     <div id="Bubble" class="vis-container"></div>
     <div class="w3-center w3-margin-bottom">
         <b> The above Bubble plot representsthe data of each country and its corresponging population.</b>
@@ -141,7 +119,8 @@ function w3_close() {
   <script>
     const spec3 = {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Population vs Total MSW",
+  "width": 500,
+"height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
   },
@@ -181,23 +160,30 @@ function w3_close() {
   },
   "config": {}
 };
-vegaEmbed("Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+vegaEmbed("#Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(console.warn);
 </script>
 
 <script>
   const spec1 = {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"title": {"text": "Total MSW per year"},
+"width": 500,
+"height": 400,
 "data": {
   "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
 },
+"transform": [
+    {
+      "calculate": "datum.total_msw_total_msw_generated_tons_year / 1000000",
+      "as": "Total MSW Generated (in millions)"
+    }
+  ],
 "mark": {"type": "bar"},
 "encoding": {
   "x": {"title": "Region Code", "field": "region_id", "type": "ordinal"},
   "y": {
     "aggregate": "sum",
-    "field": "total_msw_total_msw_generated_tons_year",
-    "title": "Total MSW Generated per Year"
+    "field": "Total MSW Generated (in millions)",
+    "title": "Total MSW Generated (in millions) per Year"
   },
   "color": {"field": "region_id", "scale": {"scheme": "tableau10"}},
   "tooltip": [
@@ -218,9 +204,8 @@ vegaEmbed("Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(conso
 <script>
   const spec4 = {
 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-"width": 500,
-"height": 300,
-"title": "GDP Chloropeth Map",
+"width": 850,
+"height": 600,
 "data": {
   "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/ne_110m_admin_0_countries.topojson",
   "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
@@ -234,7 +219,7 @@ vegaEmbed("Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(conso
       },
       "key": "country_name",
       "fields": ["gdp"]
-    }
+    },
   }
 ],
 "projection": {"type": "equirectangular"},
@@ -243,6 +228,7 @@ vegaEmbed("Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(conso
   "color": {
     "field": "gdp",
     "type": "quantitative",
+    "title": "GDP",
     "scale": {
       "type": "linear",
       "domain": [10000, 100000],
@@ -263,56 +249,65 @@ vegaEmbed("Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(conso
 </script>
 
 <script>
-  const spec = {
-"$schema": "https://vega.github.io/schema/vega-lite/v2.json",
-"title": "Waste Collection vs Total MSW",
-"data": {
-  "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
-},
-"mark": "circle",
-"encoding": {
-  "y": {
-    "field": "total_msw_total_msw_generated_tons_year",
-    "type": "quantitative",
-    "title": "Total MSW (in tons) per Year",
-    "scale": {"type": "linear", "domain": [0, 80000000]}
+  const spec2 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v2.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/rruuzz/FathimaRuzaiqaMohamedNaushad-DV2/main/country_level_data_0.csv"
   },
-  "x": {
-    "field": "waste_collection_coverage_total_percent_of_waste",
-    "type": "quantitative",
-    "title": "Total Waste Collection",
-    "scale": {"type": "linear", "domain": [0, 105]}
-  },
-  "tooltip": [
+  "width": 500,
+  "height": 400,
+  "mark": "circle",
+  "transform": [
     {
-      "field": "waste_collection_coverage_total_percent_of_waste",
-      "type": "quantitative",
-      "title": "Total Waste Collection (percentage)"
-    },
-    {
-      "field": "total_msw_total_msw_generated_tons_year",
-      "type": "quantitative",
-      "aggregate": "sum",
-      "title": "Total MSW Generated per Year"
+      "calculate": "datum.total_msw_total_msw_generated_tons_year / 1000000",
+      "as": "Total MSW Generated (in millions)"
     }
   ],
-  "color": {
-    "field": "waste_collection_coverage_total_percent_of_waste",
-    "type": "quantitative",
-    "title": "Total Waste Collection"
-  }
-},
-"config": {}
+  "encoding": {
+    "y": {
+      "field": "Total MSW Generated (in millions)",
+      "type": "quantitative",
+      "title": "Total MSW (in million tons) per Year"
+    },
+    "x": {
+      "field": "waste_collection_coverage_total_percent_of_waste",
+      "type": "quantitative",
+      "title": "Total Waste Collection",
+      "scale": {"type": "linear", "domain": [0, 105]}
+    },
+    "tooltip": [
+      {
+        "field": "waste_collection_coverage_total_percent_of_waste",
+        "type": "quantitative",
+        "title": "Total Waste Collection (percentage)"
+      },
+      {
+        "field": "Total MSW Generated (in millions)",
+        "type": "quantitative",
+        "aggregate": "sum",
+        "title": "Total MSW Generated per Year"
+      }
+    ],
+    "color": {
+      "field": "waste_collection_coverage_total_percent_of_waste",
+      "type": "quantitative",
+      "title": "Total Waste Collection"
+    },
+    "size": {
+      "field": "waste_collection_coverage_total_percent_of_waste",
+      "type": "quantitative"
+    }
+  },
+  "config": {}
 };
-  vegaEmbed("Scatter01", spec2, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  vegaEmbed("#Scatter01", spec2, {mode: "vega-lite"}).then(console.log).catch(console.warn);
 </script>
 
 <script>
   const spec5 = {
 "$schema": "https://vega.github.io/schema/vega/v5.json",
 "width": 800,
-"height": 600,
-"title": "Population per Country",
+"height": 800,
 "padding": {"left": 5, "right": 5, "top": 20, "bottom": 0},
 "autosize": "none",
 "signals": [
