@@ -45,15 +45,14 @@
 <!-- Photo Grid -->
 <div class="w3-row" id="myGrid" style="margin-bottom:128px">
     <div class="w3-center w3-margin-bottom">
-        <b>   Data on solid waste management from throughout the world is compiled. This database contains the statistics gathered during the endeavor, which span virtually all countries and over 330 cities. The metrics contain information on all aspects of the waste management value chain, such as trash generation, composition, collection, and disposal, as well as user.     </b>
+        <h4>   Data on solid waste management from throughout the world is compiled. This database contains the statistics gathered during the endeavor, which span virtually all countries and over 330 cities. The metrics contain information on all aspects of the waste management value chain, such as trash generation, composition, collection, and disposal, as well as user.     </h4>
     </div>
-        
+    <div id="map" class= "vis-container">
     <div class = "w3-container w3-padding-20 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
+    <div>
     <div class="w3-center w3-margin-bottom">
-        
-        <img src="C:\Users\HP\Documents\GitHub\FathimaRuzaiqaMohamedNaushad-DV2\mapvis.png" style="width:100%">
         <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
             <b>~ </b>
         </div>
@@ -64,9 +63,9 @@
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
-    <div id="Bar" class="vis-container">
-      
-    </div>
+    <div id="Bar" class="vis-container"></div>
+  </div>
+  <div>
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
@@ -79,9 +78,20 @@
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
-   
-    
+    <div id="Scatter01" class="vis-container"></div>
+    <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
+        <b>~ </b>
+    </div>
+    <div class="w3-center w3-margin-bottom">
+        <b> The above Scatter graph representsthe correlation between the Total MSW generated yearly agaisnt the Total Waste collection.</b>
+    </div>
+</div>
 
+<div class="w3-half">
+    <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
+        <b>~ </b>
+    </div>
+    <div id="Scatter02" class="vis-container"></div>
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
@@ -91,7 +101,10 @@
 </div>
 
 <div>
-    <img src="C:\Users\HP\Documents\GitHub\FathimaRuzaiqaMohamedNaushad-DV2\visualizationBub.png" style="width:100%">
+  <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
+        <b>~ </b>
+    </div>
+    <div id="Bubble" class="vis-container"></div>
     <div class="w3-center w3-margin-bottom">
         <b> The above Bubble plot representsthe data of each country and its corresponging population.</b>
     </div>
