@@ -139,10 +139,8 @@ function w3_close() {
 <script type="text/javascript">
 
   var vis1 = "Idioms/Bar01.json";
-  vegaEmbed('#bar_chart', vis1).then(function(result) {
-  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-  }).catch(console.error);
-
+  vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  
   var vis2 = "Idioms/Bubble.json";
   vegaEmbed('#bubble_chart', vis2).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
