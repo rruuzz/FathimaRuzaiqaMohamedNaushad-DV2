@@ -10,6 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Import Vega and Vega Lite -->
+<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
@@ -31,7 +32,6 @@ img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
 .my-element {background-color: #E0ECF3}
 </style>
-<script>IdiomsJS.js</script>
 </head>
 <body>
 
@@ -71,7 +71,7 @@ img {margin-bottom: -7px}
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
-    <div id="chart1" class="w3-container w3-center">
+    <div id="bar_chart>
     </div>
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
@@ -135,6 +135,35 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 </script>
+
+<script type="text/javascript">
+
+  var vis1 = "Idioms/Bar01.json";
+  vegaEmbed('#bar_chart', vis1).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis2 = "Idioms/Bubble.json";
+  vegaEmbed('#bubble_chart', vis2).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis3 = "Idioms/Map.json";
+  vegaEmbed('#chloropeth_map', vis3).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis4 = "Idioms/Scatter01.json";
+  vegaEmbed('#scatter_plot', vis4).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  var vis5 = "Idioms/Scatter02.json";
+  vegaEmbed('#scatter_plot', vis5).then(function(result) {
+  // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+
 
 </body>
 </html>
