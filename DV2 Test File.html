@@ -34,9 +34,10 @@
 
 <!-- Header -->
 <div class="my-element">
-<div class="w3-clear"></div>
-<header class="w3-center w3-margin-bottom">
-  <h1><b>Global Wastage Analysis</b></h1>
+<header class="w3-right w3-margin-bottom">
+  <p style="background-image: url('header.jpg');"></p>
+  <h1>
+    <b>Global Wastage Analysis</b></h1>
   <p><b>A data visualization representing analysis of gloabal wastage</b></p>
   <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
 </header>
@@ -64,7 +65,7 @@
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
     </div>
-    <div id="bar_chart class="vis-container">
+    <div id="bar_chart" class="vis-container">
     </div>
     <div class = "w3-container w3-padding-10 w3-light-grey w3-center w3-opacity w3-xlarge">
         <b>~ </b>
