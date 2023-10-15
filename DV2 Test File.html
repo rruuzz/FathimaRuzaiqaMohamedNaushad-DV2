@@ -3,41 +3,34 @@
 <html>
 
 
-<head>
-<title>Global Wastage Analysis</title>
+  <head>
+  <title>Global Wastage Analysis</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" charset="UTF-8"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Import Vega and Vega Lite -->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  <!-- Import Vega and Vega Lite -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-<!-- Import Google fonts -->
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Import Google fonts -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
- <!-- Import pure.css -->
- <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
- integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+  integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Import style css file -->
+  <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 
-
-<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=D9QkURtyIKDD3hI0A36TXe2bGa35n1CunCDCLO6RvSmLxJZKByvPdIov20uxjqkestKw_inSdH4IltD1c_rFSf5mShYaanORxjbm5ZD-DNg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly93d3cudzNzY2hvb2xzLmNvbS93M2Nzcy90cnl3M2Nzc190ZW1wbGF0ZXNfcGhvdG8uaHRt"/><style>
-body,h1 {font-family: "Montserrat", sans-serif}
-img {margin-bottom: -7px}
-.w3-row-padding img {margin-bottom: 12px}
-.my-element {background-color: #E0ECF3}
-</style>
 </head>
 <body>
-
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
 
 <!-- Header -->
 <div class="my-element">
@@ -140,7 +133,7 @@ function w3_close() {
 
   var vis1 = "Idioms/Bar01.json";
   vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
-  
+
   var vis2 = "Idioms/Bubble.json";
   vegaEmbed('#bubble_chart', vis2).then(function(result) {
   // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
