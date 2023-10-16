@@ -1,0 +1,98 @@
+body *{
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-family: "Bebas Neue";
+  font-weight: 1000;
+  align-self: center;
+  color: #0B4062;
+  padding-bottom: 30px;
+  font-size: 90px;
+}
+
+body {
+  background-color: white;
+}
+
+.bg{
+  background-image: url("C:\Users\HP\Documents\GitHub\FathimaRuzaiqaMohamedNaushad-DV2\recycle-logo-with-papers.jpg")
+}
+
+.page {
+  width: 1500px;
+  background-color:  white;
+  margin: auto;
+  padding: 20px;
+  padding-top: 35px;
+}
+
+.vis-container {
+  align-self: center;
+  width: 100%;
+  padding: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.description-right {
+  padding-left: 20px;
+}
+
+.description-left {
+  padding-right: 20px;
+}
+
+.pure-g {
+  margin-bottom: 40px;
+}
+
+.small-font {
+  font-size: 14px;
+}
+
+.important_text {
+  color: #4C697B;
+  font-family: "Roboto Slab";
+}
+
+.sub_text {
+  color: #2F6376;
+  font-family: "Roboto Slab";
+}
+
+h2 {
+  font-family: "Roboto Slab";
+  font-weight: 600;
+}
+
+h6 {
+  font-family: "Roboto Slab";
+  align-self: center;
+  font-size: 18px;
+}
+
+p {
+  font-family: "Roboto Slab";
+  font-weight: 20;
+  font-size: large;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.left, .right {
+  width: 20%;
+}
+
+.middle {
+  width: 60%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
