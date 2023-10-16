@@ -201,7 +201,12 @@ function w3_close() {
       }
     ]
   },
-  "config": {}
+  "config": {
+    "axis": {
+    "titleFontSize":14,
+    "labelFontSize": 13
+  }
+  }
 };
 vegaEmbed("#Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(console.warn);
 </script>
@@ -239,7 +244,12 @@ vegaEmbed("#Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(cons
     }
   ]
 },
-"config": {}
+"config": {
+  "axis": {
+    "titleFontSize":14,
+    "labelFontSize": 13
+  }
+}
 };
   vegaEmbed("#Bar", spec1, {mode: "vega-lite"}).then(console.log).catch(console.warn);
 </script>
@@ -286,7 +296,7 @@ vegaEmbed("#Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(cons
     {"field": "gdp", "title": "GDP", "type": "quantitative", "format": ".2f"}
   ]
 },
-"config": {"mark": {"invalid": null}}
+"config": {"mark": {"invalid": null},}
 };
   vegaEmbed("#Map", spec4, {mode: "vega-lite"}).then(console.log).catch(console.warn);
 </script>
@@ -341,7 +351,12 @@ vegaEmbed("#Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(cons
       "type": "quantitative"
     }
   },
-  "config": {}
+  "config": {
+    "axis": {
+    "titleFontSize":14,
+    "labelFontSize": 13
+  }
+  }
 };
   vegaEmbed("#Scatter01", spec2, {mode: "vega-lite"}).then(console.log).catch(console.warn);
 </script>
@@ -432,7 +447,9 @@ vegaEmbed("#Scatter02", spec3, {mode: "vega-lite"}).then(console.log).catch(cons
     ]
   }
 ],
-"config": {}
+"config": {
+  
+}
 };
   vegaEmbed("#Bubble", spec5, {mode: "vega"}).then(console.log).catch(console.warn);
 </script>
