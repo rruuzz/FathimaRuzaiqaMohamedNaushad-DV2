@@ -96,3 +96,29 @@ p {
   display: table;
   clear: both;
 }
+
+.opacity{
+  opacity:0.60
+}
+
+.margin-bottom{
+  margin-bottom:16px!important
+}
+
+.center{
+  text-align:center
+}
+
+.container:after,.w3-container:before{
+  content:"";display:table;clear:both
+}
+
+.medium{
+  font-size:15px!important
+}
+
+.large{
+  font-size:18px!important
+}
+
+.padding-20{padding-top:16px!important;padding-bottom:16px!important}
