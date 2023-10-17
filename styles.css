@@ -1,6 +1,4 @@
-body *{
-  font-family: 'Open Sans', sans-serif;
-}
+
 
 h1 {
   font-family: "Bebas Neue";
@@ -13,6 +11,7 @@ h1 {
 
 body {
   background-color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .bg{
@@ -54,29 +53,27 @@ body {
 
 .important_text {
   color: #4C697B;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", sans-serif;
 }
 
 .sub_text {
   color: #2F6376;
-  font-family: "Roboto Slab";
+  font-family: "Roboto Slab", sans-serif;
 }
 
 h2 {
-  font-family: "Roboto Slab";
+  font-family: "Trebuchet MS", sans-serif;
   font-weight: 600;
 }
 
 h6 {
-  font-family: "Roboto Slab";
+  font-family: "Trebuchet MS", sans-serif;
   align-self: center;
   font-size: 18px;
 }
 
 p {
-  font-family: "Roboto Slab";
-  font-weight: 20;
-  font-size: large;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .column {
