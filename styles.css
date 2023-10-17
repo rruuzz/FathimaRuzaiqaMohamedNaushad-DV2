@@ -33,6 +33,7 @@ body {
   padding: 50px;
   padding-left: 20px;
   padding-right: 20px;
+  clear: both;
 }
 
 .description-right {
@@ -121,4 +122,4 @@ p {
   font-size:18px!important
 }
 
-.padding-20{padding-top:16px!important;padding-bottom:16px!important}
+.padding-10{padding-top:06px!important;padding-bottom:10px!important}
